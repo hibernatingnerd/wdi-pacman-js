@@ -4,6 +4,22 @@ var lives = 2;
 
 
 // Define your ghosts here
+function createGhost(name, colour, character) {
+  var createGhost = {
+    'menu_option': '1',
+    'name': name,
+    'colour': colour,
+    'character': character,
+    'enable': false,
+  }
+  return createGhost;
+}
+
+var inky = createGhost('Inky', 'Red', 'Shadow');
+var blinky = createGhost('Blinky', 'Cyan', 'Speedy');
+var pinky = createGhost('Pinky', 'Pink', 'Bashful');
+var clyde = createGhost('Clyde', 'Orange', 'Pokey');
+
 
 // replace this comment with your four ghosts setup as objects
 
