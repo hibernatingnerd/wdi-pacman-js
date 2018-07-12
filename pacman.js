@@ -4,24 +4,25 @@ var lives = 2;
 
 
 // Define your ghosts here
+var ghosts = [];
 function createGhost(name, colour, character) {
   var createGhost = {
-    'menu_option': '1',
+    'menu_option': ghosts.length + 1,
     'name': name,
     'colour': colour,
     'character': character,
     'enable': false,
   }
+  ghosts.push(createGhost);
   return createGhost;
 }
+
+// replace this comment with your four ghosts setup as objects
 
 var inky = createGhost('Inky', 'Red', 'Shadow');
 var blinky = createGhost('Blinky', 'Cyan', 'Speedy');
 var pinky = createGhost('Pinky', 'Pink', 'Bashful');
 var clyde = createGhost('Clyde', 'Orange', 'Pokey');
-
-
-// replace this comment with your four ghosts setup as objects
 
 
 // Draw the screen functionality
@@ -60,6 +61,9 @@ function eatDot() {
   score += 10;
 }
 
+function eatGhosts() {
+}
+
 
 // Process Player's Input
 function processInput(key) {
@@ -71,6 +75,7 @@ function processInput(key) {
     case 'd':
       eatDot();
       break;
+
     default:
       console.log('\nInvalid Command!');
   }
